@@ -10,7 +10,7 @@ module.exports = {
   },
   extends: [
     '@nuxtjs',
-    'plugin:nuxt/recommended',
+    'standard',
     'prettier'
   ],
   plugins: [

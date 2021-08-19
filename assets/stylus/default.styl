@@ -1,0 +1,51 @@
+html,
+body
+  font-family-YuGothic()
+  color color-font
+  width 100%
+  height 100%
+  margin 0 auto
+  font-size 16px
+  font-weight 400
+  scroll-behavior smooth
+  -webkit-text-size-adjust 100%
+  font-feature-settings "pkna"
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-display swap
+  -webkit-overflow-scrolling touch
+  +bp(md)
+    width 100vw
+    height auto
+    position relative
+    overflow-x hidden
+    overflow-y scroll
+  &.overflow-y-hidden
+    overflow-y hidden
+//custom-scroll(rgba(color-white, 0), rgba(color-black, .32), 2, true, false)
+
+br
+  &.sp__br
+    display none
+    +bp(sm)
+      display block
+
+a
+  position relative
+  display inline-block
+  link(color-font-strong)
+
+img
+  transition .3s
+  &[lazy=loading]
+    opacity 0
+  &[lazy=loaded]
+    opacity 1
+
+.orange
+  color color-orange
+.bold
+  font-weight bold
+.sm_none
+  +bp(sm)
+    display none

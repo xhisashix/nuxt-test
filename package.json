@@ -25,6 +25,8 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "prettier": "^2.3.2",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "stylus": "^0.54.8",
     "stylus-loader": "^3.0.2"
   }

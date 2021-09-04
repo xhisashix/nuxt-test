@@ -6,8 +6,8 @@
 				img(src="/image/common/facebook_cover_photo_1.png", alt="alt")
 		nav
 			ul
-				li(v-for="list in lists" :key="index")
-					a(href="")
+				li(v-for="(list, index) in lists" :key="index")
+					a(:href="list.link")
 							p(v-html="list.txt")
 </template>
 
@@ -16,10 +16,10 @@ export default {
 	data() {
 		return {
 			lists: [
-				{ txt: 'product' },
-				{ txt: 'about' },
-				{ txt: 'store' },
-				{ txt: 'home' },
+				{ txt: 'Home', link: '/home' },
+				{ txt: 'Product', link: "/product" },
+				{ txt: 'About', link: '/about' },
+				{ txt: 'Store', link: '/store' },
 			],
 		}
 	},

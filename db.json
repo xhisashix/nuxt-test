@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "name_list" : [
+    {
+      "name": "Jared Mullins",
+      "email": "cepe@od.fr"
+    },
+    {
+      "name": "Bobby Stevenson",
+      "email": "zehzep@dic.lc"
+    },
+    {
+      "name": "Ola Morales",
+      "email": "wejro@ciwhas.cw"
+    },
+    {
+      "name": "Lucille Singleton",
+      "email": "gul@horte.cg"
+    },
+    {
+      "name": "Emma Cohen",
+      "email": "nak@huhdec.de"
+    },
+    {
+      "name": "Duane Weber",
+      "email": "mugode@we.sz"
+    }
+  ]
+}

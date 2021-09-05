@@ -17,7 +17,7 @@ export default {
 		return {
 			lists: [
 				{ txt: 'Home', link: '/home' },
-				{ txt: 'Product', link: "/product" },
+				{ txt: 'Axios', link: "/axios" },
 				{ txt: 'About', link: '/about' },
 				{ txt: 'Store', link: '/store' },
 			],

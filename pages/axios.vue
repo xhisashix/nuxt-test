@@ -6,6 +6,7 @@
       li(v-for="i in fInfo" :key="i.id")
         p 名前：{{ i.name }}
         p メールアドレス：{{i.email}}
+    p {{info[0].name}}
 </template>
 
 <script>

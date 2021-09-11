@@ -18,7 +18,7 @@ export default {
 			lists: [
 				{ txt: 'Home', link: '/home' },
 				{ txt: 'Axios', link: "/axios" },
-				{ txt: 'About', link: '/about' },
+				{ txt: 'Search', link: '/search' },
 				{ txt: 'Store', link: '/store' },
 			],
 		}

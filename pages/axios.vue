@@ -1,12 +1,19 @@
 <template lang="pug">
-  .page
-    label 名前の検索
-    input(v-model="name")
-    ul
-      li(v-for="i in fInfo" :key="i.id")
-        p 名前：{{ i.name }}
-        p メールアドレス：{{i.email}}
-    p {{info[0].name}}
+  .page-axios
+    .search-area
+      h1 検索
+      .search-content
+        label 名前の検索
+        input(v-model="name")
+    .menber-list
+      table
+        tbody
+          tr
+            th 名前
+            th メールアドレス
+          tr(v-for="i in fInfo" :key="i.id")
+            td {{ i.name }}
+            td {{i.email}}
 </template>
 
 <script>
@@ -32,3 +39,29 @@ export default {
   },
 }
 </script>
+
+<style lang="stylus">
+.page-axios
+  max-width 980px
+  margin 0 auto
+  .search-area
+    margin-top 30px
+    h1
+      font-size rem(20px)
+      line-height rem(24px)
+      border-left 3px solid #F2C063
+      padding-left 8px
+      box-sizing border-box
+    .search-content
+      margin-top 10px
+  .menber-list
+    margin-top 30px
+    table
+      width 100%
+      tr
+        th,td
+          width 50%
+          padding 10px
+          box-sizing border-box
+          border 1px solid #eee
+</style>

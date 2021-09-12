@@ -44,6 +44,7 @@ export default {
 .page-axios
   max-width 980px
   margin 0 auto
+  padding-bottom 80px
   .search-area
     margin-top 30px
     h1
@@ -54,6 +55,8 @@ export default {
       box-sizing border-box
     .search-content
       margin-top 10px
+      label
+        margin-right 20px
   .menber-list
     margin-top 30px
     table
@@ -64,4 +67,7 @@ export default {
           padding 10px
           box-sizing border-box
           border 1px solid #eee
+        th
+          background #ddd
+
 </style>

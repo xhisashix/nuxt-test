@@ -1,12 +1,13 @@
-<template>
-  <swiper :options="swiperOption">
-    <swiper-slide>Slide 1</swiper-slide>
-    <swiper-slide>Slide 2</swiper-slide>
-    <swiper-slide>Slide 3</swiper-slide>
-    <div slot="pagination" class="swiper-pagination"></div>
-    <div slot="button-prev" class="swiper-button-prev"></div>
-    <div slot="button-next" class="swiper-button-next"></div>
-  </swiper>
+<template lang="pug">
+.page-swiper
+  client-only
+    swiper(:options="swiperOption")
+      swiper-slide Slide 1
+      swiper-slide Slide 2
+      swiper-slide Slide 3
+      div(slot="pagination" class="swiper-pagination")
+      div(slot="button-prev" class="swiper-button-prev")
+      div(slot="button-next" class="swiper-button-next")
 </template>
 
 <script>
@@ -35,6 +36,4 @@ export default {
 </script>
 
 <style lang="stylus">
-.swiper-button-prev
-  left 0
 </style>

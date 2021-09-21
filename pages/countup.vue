@@ -2,9 +2,9 @@
   .page-countup
     h1 カウントアップデモ
     .content
-      .minus_button(ref="mBtn" @click="minusBtn()")
-      input(type="number" v-model="num" min="0" max="50" )
-      .plus_button(ref="pBtn" @click="plusBtn()")
+      button.minus_button(ref="mBtn" @click="minusBtn()")
+      input(type="number" v-model="num")
+      button.plus_button(ref="pBtn" @click="plusBtn()")
     .value {{ num }}
 </template>
 

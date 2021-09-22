@@ -3,7 +3,7 @@
 	header
 		.logo
 			a(href="/")
-				img(src="/image/common/facebook_cover_photo_1.png", alt="alt")
+				p eLogs
 		nav
 			ul
 				li(v-for="(list, index) in lists" :key="index")
@@ -29,18 +29,21 @@ export default {
 <style lang="stylus">
 .header
 	width 100%
+	border-bottom 1px solid #eee
+	margin-bottom 30px
 	header
 		max-width 1280px
 		margin 0 auto
 		display flex
 		align-items center
+		height 70px
 		padding 10px 15px
 		box-sizing border-box
 		.logo
 			a
-				img
-					width 150px
-					height auto
+				p
+					font-size rem(32px)
+					line-height rem(36px)
 		nav
 			margin-left auto
 			ul

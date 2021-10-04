@@ -16,10 +16,8 @@ export default {
 	data() {
 		return {
 			lists: [
-				{ txt: 'Home', link: '/home' },
-				{ txt: 'Axios', link: "/axios" },
-				{ txt: 'Search', link: '/search' },
-				{ txt: 'Store', link: '/store' },
+				{ txt: 'Blog', link: 'https://pg-log.com/' },
+				{ txt: 'Contact', link: "/https://pg-log.com/contact/" },
 			],
 		}
 	},
@@ -52,6 +50,11 @@ export default {
 				align-items center
 				li
 					margin-left 20px
+					padding 10px
+					box-sizing border-box
+					&:hover
+						border-bottom 2px solid main-color
+						transition .3s
 					a
 						p
 							font-size rem(18px)

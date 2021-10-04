@@ -5,7 +5,8 @@
       ul
         li(v-for="c in contents" :key="c.id")
           a( :href="c.link")
-            img(:src="c.img", alt="alt")
+            .img
+              img(:src="c.img", alt="alt")
             p(v-html="c.txt")
 
 </template>
@@ -42,23 +43,33 @@ export default {
     margin-top 30px
     ul
       display flex
-      justify-content space-around
+      justify-content flex-start
       align-items center
       flex-wrap wrap
       li
-        width 30%
-        height auto
+        width 300px
+        height 300px
         padding 10px
         margin-top 20px
+        margin-left 20px
         box-sizing border-box
         border 1px solid #eee
-        img
-          display block
-          width 80%
-          height auto
-          max-height 80%
-          margin 0 auto
-        p
-          font-size rem(18px)
-          line-height rem(24px)
+        a
+          height 100px
+          width 100%
+          cursor pointer
+          .img
+            height 250px
+            display flex
+            justify-content center
+            align-items center
+            img
+              width 250px
+              height 220px
+              object-fit contain
+              margin 0 auto
+          p
+            font-size rem(18px)
+            line-height rem(24px)
+            margin-top 10px
 </style>

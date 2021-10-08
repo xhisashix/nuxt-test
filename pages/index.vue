@@ -25,6 +25,16 @@ export default {
                 img: '/image/thumbnail/ui-ux-interface-sliders.png',
                 txt: 'vue-awsom-swiper'
             },
+            {
+              link: "/accordion",
+                img: '/image/thumbnail/coding.png',
+                txt: 'アコーディオンメニュー'
+            },
+            {
+              link: "/axios",
+                img: '/image/thumbnail/cryptocurrency.png',
+                txt: 'アコーディオンメニュー'
+            },
           ],
         }
     },
@@ -49,23 +59,23 @@ export default {
       li
         width 300px
         height 300px
-        padding 10px
         margin-top 20px
         margin-left 20px
         box-sizing border-box
         border 1px solid #eee
         a
-          height 100px
+          padding 10px
+          height 100%
           width 100%
           cursor pointer
+          box-sizing border-box
           .img
-            height 250px
             display flex
             justify-content center
             align-items center
             img
               width 250px
-              height 220px
+              height 250px
               object-fit contain
               margin 0 auto
           p

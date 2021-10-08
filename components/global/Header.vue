@@ -29,6 +29,7 @@ export default {
 	width 100%
 	border-bottom 1px solid #eee
 	margin-bottom 30px
+	background main-color
 	header
 		max-width 1280px
 		margin 0 auto
@@ -42,6 +43,8 @@ export default {
 				p
 					font-size rem(32px)
 					line-height rem(36px)
+					color #fff
+					font-weight bold
 		nav
 			margin-left auto
 			ul
@@ -52,11 +55,9 @@ export default {
 					margin-left 20px
 					padding 10px
 					box-sizing border-box
-					&:hover
-						border-bottom 2px solid main-color
-						transition .3s
 					a
 						p
 							font-size rem(18px)
-							line-height 24px
+							line-height rem(24px)
+							font-weight bold
 </style>

@@ -1,5 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  router : {
+    base: "/"
+  },
+
   head: {
     title: 'サンプルサイト',
     htmlAttrs: {

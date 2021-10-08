@@ -1,6 +1,5 @@
 <template lang="pug">
 div.scroll
-  Header
   .scroll-position スクロール位置の取得 : {{ scrollY }}
   .section(ref="section1")
     p section1の高さ：{{section1}}

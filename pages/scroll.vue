@@ -3,6 +3,7 @@ div.scroll
   .scroll-position スクロール位置の取得 : {{ scrollY }}
   .section(ref="section1" :class="{now : now }")
     p section1の高さ：{{section1}}
+    Sample(ref="reference")
   .section(ref="section2")
     p section2の高さ：{{section2}}
 </template>
@@ -15,6 +16,7 @@ export default {
       section1: '',
       now: false,
       section2: '',
+      sample: '',
     }
   },
   mounted() {
@@ -29,6 +31,7 @@ export default {
     getHeight() {
       this.section1 = this.$refs.section1.offsetTop
       this.section2 = this.$refs.section2.offsetTop
+      this.sample = this.$refs.reference.$refs.sample.offsetTop
     },
     addClass() {
       if (this.scrollY > this.section1) {

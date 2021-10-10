@@ -1,6 +1,6 @@
 <template lang="pug">
   div
-    Header
+    Header(ref="reference")
     .nuxt
       Nuxt
 </template>

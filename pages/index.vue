@@ -1,7 +1,8 @@
 <template lang="pug">
   .page-top
-    h1 デモページ一覧
+    vue-swiper
     .content-list
+      h1 デモページ一覧
       ul
         li(v-for="c in contents" :key="c.id")
           a( :href="c.link")
@@ -12,7 +13,11 @@
 </template>
 
 <script>
+import VueSwiper from '~/components/ui/VueSwiper.vue'
 export default {
+  components : {
+    VueSwiper
+  },
     data() {
         return {
             contents: [{

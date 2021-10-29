@@ -32,11 +32,12 @@ export default {
     const reference = this.$refs.reference
 
     const self = this
+    console.log(this)
+    console.log(self)
     reference.onscroll = function () {
       const element = self.$refs.reference
       const clientHeight = element.clientHeight
       const scrollHeight = element.scrollHeight
-
       // 一番下まで行ったかの判定
       if (scrollHeight - (clientHeight + element.scrollTop) < 1) {
         self.isActive = true

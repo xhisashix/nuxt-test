@@ -32,8 +32,6 @@ export default {
     const reference = this.$refs.reference
 
     const self = this
-    console.log(this)
-    console.log(self)
     reference.onscroll = function () {
       const element = self.$refs.reference
       const clientHeight = element.clientHeight

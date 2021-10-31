@@ -1,6 +1,9 @@
 <template lang="pug">
   .page-bottom-scroll
     h1 一番下までスクロールしたとき
+    p 要素の高さ（見えている部分）：{{ clientHeight }}
+    p 要素の高さ（見得ていない部分も含めたもの）：{{ scrollHeight }}
+    p 要素の内容が垂直にスクロールした位置：{{ scrollTop }}
     .scroll-section(ref="reference")
       section
         p section
@@ -26,6 +29,9 @@ export default {
   data() {
     return {
       isActive: false,
+      clientHeight: '',
+      scrollHeight: '',
+      scrollTop: '',
     }
   },
   mounted() {
@@ -36,6 +42,11 @@ export default {
       const element = self.$refs.reference
       const clientHeight = element.clientHeight
       const scrollHeight = element.scrollHeight
+
+      self.clientHeight = clientHeight
+      self.scrollHeight = scrollHeight
+      self.scrollTop = element.scrollTop
+
       // 一番下まで行ったかの判定
       if (scrollHeight - (clientHeight + element.scrollTop) < 1) {
         self.isActive = true

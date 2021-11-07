@@ -2,12 +2,9 @@
   .main-swiper
     client-only
       swiper(:options="swiperOption")
-        swiper-slide
-          img(src="/image/main/main1.jpg", alt="alt")
-        swiper-slide
-          img(src="/image/main/main2.jpg", alt="alt")
-        swiper-slide
-          img(src="/image/main/main3.jpg", alt="alt")
+        swiper-slide(v-for="item in items" :key="item.id")
+          .s-img
+            img(:src="item.img", alt="alt")
     .swiper-pagination(slot="pagination")
     .swiper-button-prev(slot="button-prev")
     .swiper-button-next(slot="button-next")
@@ -18,20 +15,34 @@
 export default {
   data() {
     return {
+      items: [
+        { img: '/image/main/main1.jpg' },
+        { img: '/image/main/main2.jpg' },
+        { img: '/image/main/main3.jpg' },
+      ],
       swiperOption: {
         autoplay: {
           delay: 5000,
           disableOnInteraction: false,
         },
-        slidesPerView: 1.5,
+        slidesPerView: 1.3,
         loop: true,
-        effect: 'cards',
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
         speed: 1000,
         spaceBetween: 40,
         centeredSlides: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+          type: 'bullets',
+          bulletClass: 'swiper-pagination-bullet',
         },
         navigation: {
           nextEl: '.swiper-button-next',
@@ -50,10 +61,15 @@ export default {
 .main-swiper
   position relative
   padding 20px 0
-  img
+  .s-img
     width 100%
-    height auto
     max-height 600px
+    img
+      width 100%
+      height auto
+      display flex
+      justify-content center
+      align-items center
   .swiper-pagination
     position: absolute
     bottom 0

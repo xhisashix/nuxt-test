@@ -21,18 +21,43 @@ export default {
     data() {
         return {
             contents: [{
-                link: "/scroll",
+                link: "/demo/scroll",
                 img: '/image/thumbnail/optimize-image.png',
                 txt: 'スクロール位置の取得方法'
             },
             {
-              link: "/swiper",
+              link: "/demo/swiper",
                 img: '/image/thumbnail/ui-ux-interface-sliders.png',
                 txt: 'vue-awsom-swiper'
             },
             {
-              link: "/accordion",
+              link: "/demo/accordion",
                 img: '/image/thumbnail/coding.png',
+                txt: 'アコーディオンメニュー'
+            },
+            {
+              link: "/demo/axios",
+                img: '/image/thumbnail/cryptocurrency.png',
+                txt: 'axiosを使った値の取得'
+            },
+            {
+              link: "/demo/click",
+                img: '/image/thumbnail/cryptocurrency.png',
+                txt: 'クリックイベント'
+            },
+            {
+              link: "/demo/data",
+                img: '/image/thumbnail/cryptocurrency.png',
+                txt: 'データを表示'
+            },
+            {
+              link: "/demo/passwordGeneration",
+                img: '/image/thumbnail/cryptocurrency.png',
+                txt: 'パスワード生成ツール'
+            },
+            {
+              link: "/axios",
+                img: '/image/thumbnail/cryptocurrency.png',
                 txt: 'アコーディオンメニュー'
             },
             {

@@ -1,17 +1,14 @@
 <template lang="pug">
 .page-swiper
-  client-only
-    swiper(:options="swiperOption")
-      swiper-slide Slide 1
-      swiper-slide Slide 2
-      swiper-slide Slide 3
-      div(slot="pagination" class="swiper-pagination")
-      div(slot="button-prev" class="swiper-button-prev")
-      div(slot="button-next" class="swiper-button-next")
+  vue-swiper
 </template>
 
 <script>
+import VueSwiper from '~/components/ui/VueSwiper.vue'
 export default {
+  components : {
+    VueSwiper
+  },
   data() {
     return {
       swiperOption: {

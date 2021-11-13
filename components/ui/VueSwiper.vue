@@ -70,6 +70,36 @@ export default {
       display flex
       justify-content center
       align-items center
+  .swiper-button-next,
+  .swiper-button-prev
+    width: 45px
+    height: 45px
+    background: #fff
+    border-radius: 50%
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      top 15px
+      left: 15px
+      margin auto
+      width: 20px
+      height: 5px
+      background: #f9a826
+      border-radius: 100vh
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+      top: 25px
+  .swiper-button-prev
+    &::before,
+    &::after
+      left: auto
+      right: 15px
+    &::before
+      transform: rotate(-45deg)
+    &::after
+      transform: rotate(45deg)
   .swiper-pagination
     position: absolute
     bottom 0
@@ -77,4 +107,8 @@ export default {
     left 0
     right 0
     margin auto
+    span
+      margin-left: 10px
+      &:first-child
+        margin-left: 0
 </style>

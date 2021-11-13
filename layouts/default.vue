@@ -3,6 +3,7 @@
     Header(ref="reference")
     .nuxt
       Nuxt
+    Footer
 </template>
 
 <script>

@@ -81,6 +81,7 @@ export default {
     line-height rem(32px)
   .content-list
     margin-top 30px
+    padding-bottom 30px
     ul
       display flex
       justify-content flex-start

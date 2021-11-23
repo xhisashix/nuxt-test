@@ -7,14 +7,14 @@
 export default {
   data() {
     return {
-      message: ''
+      message: '',
     }
   },
   methods: {
     changeMessage(e) {
-      this.$store.commit('changeMessage',  e.target.value)
-    }
-  }
+      this.$store.commit('changeMessage', e.target.value)
+    },
+  },
 }
 </script>
 <style lang="stylus"></style>

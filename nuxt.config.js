@@ -1,23 +1,21 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  router : {
-    base: "/"
+  router: {
+    base: '/',
   },
 
   head: {
     title: 'サンプルサイト',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -29,7 +27,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/swiper', mode: 'client' }
+    { src: '~/plugins/swiper', mode: 'client' },
+    { src: '~/plugins/persistedState.client.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,6 +51,5 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {},
 }

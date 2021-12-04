@@ -2,7 +2,6 @@
   .page-top
     vue-swiper
     .content-list
-      p {{ $store.state.message }}
       h1 デモページ一覧
       ul
         li(v-for="c in contents" :key="c.id")

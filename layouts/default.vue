@@ -1,13 +1,29 @@
 <template lang="pug">
   div
-    Header(ref="reference")
-    .nuxt
-      Nuxt
-    Footer
+    .main
+      Header(ref="reference")
+      .nuxt
+        Nuxt
+      Footer
+    transition(name="home")
+      Loading(v-if="isShow")
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      isShow: true,
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.isShow = false
+      }, 700)
+    })
+  },
+}
 </script>
 
 <style lang="stylus">
@@ -22,4 +38,8 @@ h1
   font-size rem(24px)
   line-height rem(32px)
   margin-bottom 30px
+.home-enter-active, .home-leave-active
+  transition: opacity .7s
+.home-enter, .home-leave-active
+  opacity: 0
 </style>

@@ -17,19 +17,7 @@
 </template>
 
 <script>
-export default {
-  data: () => ({
-    loading: false,
-  }),
-  methods: {
-    start() {
-      this.loading = true
-    },
-    finish() {
-      this.loading = false
-    },
-  },
-}
+export default {}
 </script>
 
 <style lang="stylus">

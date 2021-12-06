@@ -10,7 +10,11 @@
 </template>
 
 <script>
+import Loading from '~/components/ui/Loading.vue'
 export default {
+  components: {
+    Loading,
+  },
   data() {
     return {
       isShow: true,

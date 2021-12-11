@@ -35,6 +35,7 @@ div
   .nuxt
     max-width 1280px
     margin 0 auto
+    padding-top 70px
 h1
   border-left 3px solid main-color
   padding-left 15px

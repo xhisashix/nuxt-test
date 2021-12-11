@@ -9,18 +9,24 @@
 				li(v-for="(list, index) in lists" :key="index")
 					a(:href="list.link")
 							p(v-html="list.txt")
+		HumMenu
 </template>
 
 <script>
+import HumMenu from '~/components/ui/HumMenu.vue'
 export default {
-	data() {
-		return {
-			lists: [
-				{ txt: 'Blog', link: 'https://pg-log.com/' },
-				{ txt: 'Contact', link: "/https://pg-log.com/contact/" },
-			],
-		}
-	},
+  components: {
+    HumMenu,
+  },
+  data() {
+    return {
+      lists: [
+        { txt: 'Blog', link: 'https://pg-log.com/' },
+        { txt: 'Contact', link: '/https://pg-log.com/contact/' },
+      ],
+      isShow: false,
+    }
+  },
 }
 </script>
 
@@ -30,6 +36,10 @@ export default {
 	border-bottom 1px solid #eee
 	margin-bottom 30px
 	background main-color
+	position: fixed
+	top 0
+	left: 0
+	z-index 100
 	header
 		max-width 1280px
 		margin 0 auto
@@ -60,4 +70,29 @@ export default {
 							font-size rem(18px)
 							line-height rem(24px)
 							font-weight bold
+		.menu_btn
+			width: 30px
+			height: 3px
+			border-radius: 100vh
+			background: #000
+			position: relative
+			cursor pointer
+			&::before
+				width: 30px
+				height: 3px
+				border-radius: 100vh
+				background: #000
+				position: absolute
+				top -8px
+				left: 0
+				content: ''
+			&::after
+				width: 30px
+				height: 3px
+				border-radius: 100vh
+				background: #000
+				position: absolute
+				top 8px
+				left: 0
+				content: ''
 </style>

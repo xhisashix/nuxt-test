@@ -70,29 +70,4 @@ export default {
 							font-size rem(18px)
 							line-height rem(24px)
 							font-weight bold
-		.menu_btn
-			width: 30px
-			height: 3px
-			border-radius: 100vh
-			background: #000
-			position: relative
-			cursor pointer
-			&::before
-				width: 30px
-				height: 3px
-				border-radius: 100vh
-				background: #000
-				position: absolute
-				top -8px
-				left: 0
-				content: ''
-			&::after
-				width: 30px
-				height: 3px
-				border-radius: 100vh
-				background: #000
-				position: absolute
-				top 8px
-				left: 0
-				content: ''
 </style>

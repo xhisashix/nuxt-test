@@ -57,14 +57,14 @@ export default {
           txt: 'パスワード生成ツール',
         },
         {
-          link: '/axios',
+          link: '/demo/axios',
           img: '/image/thumbnail/cryptocurrency.png',
           txt: 'アコーディオンメニュー',
         },
         {
-          link: '/axios',
+          link: '/demo/bottomScroll',
           img: '/image/thumbnail/cryptocurrency.png',
-          txt: 'アコーディオンメニュー',
+          txt: '一番下までスクロールしたことを検知',
         },
       ],
     }
@@ -106,8 +106,8 @@ export default {
             justify-content center
             align-items center
             img
-              width 250px
-              height 250px
+              width auto
+              height 200px
               object-fit contain
               margin 0 auto
           p

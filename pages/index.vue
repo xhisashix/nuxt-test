@@ -66,6 +66,16 @@ export default {
           img: '/image/thumbnail/cryptocurrency.png',
           txt: '一番下までスクロールしたことを検知',
         },
+        {
+          link: '/demo/tooltip',
+          img: '/image/thumbnail/cryptocurrency.png',
+          txt: 'vue-tooltip',
+        },
+        {
+          link: '/demo/modal',
+          img: '/image/thumbnail/cryptocurrency.png',
+          txt: 'モーダルウィンドウ',
+        },
       ],
     }
   },

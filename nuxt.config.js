@@ -30,7 +30,8 @@ export default {
     { src: '~/plugins/swiper', mode: 'client' },
     { src: '~/plugins/persistedState.client.js' },
     { src: '~/plugins/constants.js' },
-    { src: '~/plugins/vue-tooltip.js', mode: 'client' }
+    { src: '~/plugins/vue-tooltip.js', mode: 'client' },
+    { src: '~/plugins/vue-scrollmajic.js', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

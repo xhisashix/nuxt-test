@@ -2,7 +2,7 @@
 .page-modal
   button(@click="isOpen") モーダルを開く
   transition(name="fade")
-    .modal(v-if="open")
+    .modal(v-show="open")
       .detail
         .close
           button(@click="isOpen")
@@ -12,13 +12,13 @@
 export default {
   data() {
     return {
-        open: false,
-    };
+      open: false,
+    }
   },
   methods: {
     isOpen() {
       this.open = !this.open
-    }
+    },
   },
 }
 </script>
@@ -80,13 +80,10 @@ export default {
             transform rotate(45deg)
           &::after
             transform: rotate(-45deg)
-.fade-enter-active
-  transition all .3s ease
-  opacity 1
-.fade-leave-active
-  transition: all .8s
-  opacity 1
-.fade-enter,
-.fade-leave-to
-  opacity 0
+.fade-enter-active, .fade-leave-active
+  transform: scale(1);
+  transition: opacity 0.5s;
+.fade-enter, .fade-leave-to
+  transition: opacity 0.5s, transform 0s 0.5s;
+  transform: scale(0);
 </style>

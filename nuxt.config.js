@@ -19,7 +19,13 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['./assets/stylus/setcss.styl'],
+  css: [
+    { src : './assets/stylus/setcss.styl' },
+    {
+      src: '~/node_modules/highlight.js/styles/tomorrow-night-bright.css',
+      lang: 'css'
+    },
+  ],
 
   styleResources: {
     stylus: './assets/stylus/set.styl',
@@ -31,7 +37,9 @@ export default {
     { src: '~/plugins/persistedState.client.js' },
     { src: '~/plugins/constants.js' },
     { src: '~/plugins/vue-tooltip.js', mode: 'client' },
-    { src: '~/plugins/vue-scrollmajic.js', mode: 'client' }
+    { src: '~/plugins/vue-scrollmajic.js', mode: 'client' },
+    { src: '~/plugins/color-picker.js', mode: 'client' },
+    { src: '~/plugins/vue-highlightjs.js', mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

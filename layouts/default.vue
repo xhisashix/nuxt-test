@@ -33,9 +33,7 @@ export default {
 <style lang="stylus">
 div
   .nuxt
-    max-width 1280px
     margin 0 auto
-    padding-top 70px
     min-height calc(100vh - 140px)
 h1
   border-left 3px solid main-color

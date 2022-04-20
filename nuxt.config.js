@@ -5,7 +5,7 @@ export default {
   },
 
   head: {
-    title: 'サンプルサイト',
+    title: "Hisashi's Portfolio",
     htmlAttrs: {
       lang: 'ja',
     },

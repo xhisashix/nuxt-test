@@ -56,6 +56,8 @@ export default {
   box-sizing: border-box
   max-width: 1200px
   margin 0 auto
+  +bp(md)
+    padding-top 50px
   .prof-area
     margin-top 30px
     display: flex
@@ -73,9 +75,13 @@ export default {
       h3
         font-size rem(32px)
         line-height: rem(36px)
+        +bp(md)
+          font-size: rem(24px)
       p
         font-size rem(24px)
         line-height: rem(32px)
+        +bp(md)
+          font-size rem(18px)
       .skill
         margin-top: 30px
         ul
@@ -87,6 +93,8 @@ export default {
             padding 20px
             box-sizing: border-box
             margin-top: 10px
+            +bp(md)
+              width: 50%
             p
               margin-top: 15px
             .img

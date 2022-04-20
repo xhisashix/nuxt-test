@@ -28,4 +28,6 @@ export default {}
       font-size rem(128px)
       font-family: 'Pinyon Script', cursive;
       font-weight bold
+      +bp(md)
+        font-size rem(72px)
 </style>

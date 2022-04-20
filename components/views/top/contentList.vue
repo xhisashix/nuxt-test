@@ -71,9 +71,13 @@ export default {
 <style lang="stylus">
 .page-content-list
   padding-top 150px
+  +bp(md)
+    padding-top 50px
   .content-list
     max-width: 1200px
     margin 20px auto
+    +bp(md)
+      max-width: 95%
     ul
       display: flex
       justify-content: space-between
@@ -86,6 +90,9 @@ export default {
         box-shadow 2px 2px 8px gray;
         margin-top 40px
         transition: .5s
+        +bp(md)
+          width: 49%
+          margin-top 20px
         &:hover
           transform translate(5px, 5px)
         a
@@ -95,6 +102,8 @@ export default {
             flex-direction: column
           .img
             height: 250px
+            +bp(md)
+              height: 200px
             img
               width: 100%
               height: 100%

@@ -35,6 +35,7 @@ export default {
 .page-blog-list
   margin-top: 120px
   padding-top 100px
+  padding-bottom 100px
   background: rgba(204 204 204 .2)
   .blog-list
     max-width: 1200px

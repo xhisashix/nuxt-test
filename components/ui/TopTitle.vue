@@ -29,6 +29,9 @@ export default {
     line-height: rem(52px)
     font-family-Robot()
     font-weight bold
+    +bp(md)
+      font-size rem(24px)
+      line-height: rem(32px)
   .line
     width: 150px
     height: 1px
@@ -38,4 +41,7 @@ export default {
     font-family-NotoSans()
     font-size rem(32px)
     line-height: rem(40px)
+    +bp(md)
+      font-size rem(18px)
+      line-height: rem(22px)
 </style>

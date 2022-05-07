@@ -74,40 +74,41 @@ export default {
   +bp(md)
     padding-top 50px
   .content-list
-    max-width: 1200px
     margin 20px auto
+    max-width 1200px
+    width 95%
     +bp(md)
-      max-width: 95%
+      max-width 95%
     ul
-      display: flex
-      justify-content: space-between
-      flex-wrap: wrap
+      display flex
+      flex-wrap wrap
+      justify-content space-between
       li
-        width: 30%
-        border 1px solid #3b4043
-        padding 20px
-        box-sizing: border-box
-        box-shadow 2px 2px 8px gray;
+        box-sizing border-box
         margin-top 40px
-        transition: .5s
+        padding 20px
+        width 30%
+        border 1px solid #3b4043
+        box-shadow 2px 2px 8px gray
+        transition 0.5s
         +bp(md)
-          width: 49%
           margin-top 20px
+          width 49%
         &:hover
           transform translate(5px, 5px)
         a
-            display: flex
-            justify-content: center
-            align-items: center
-            flex-direction: column
-          .img
-            height: 250px
-            +bp(md)
-              height: 200px
-            img
-              width: 100%
-              height: 100%
-              object-fit: contain
-          p
-            margin-top: 10px
+          display flex
+          flex-direction column
+          justify-content center
+          align-items center
+        .img
+          height 250px
+          +bp(md)
+            height 200px
+          img
+            width 100%
+            height 100%
+            object-fit contain
+        p
+          margin-top 10px
 </style>

@@ -11,6 +11,7 @@
             h3 {{ post.title.rendered }}
             .description(v-html='post.excerpt.rendered')
 </template>
+
 <script>
 import axios from 'axios'
 import TopTitle from '~/components/ui/TopTitle.vue'
@@ -33,54 +34,55 @@ export default {
 </script>
 <style lang="stylus">
 .page-blog-list
-  margin-top: 120px
+  margin-top 120px
   padding-top 100px
   padding-bottom 100px
-  background: rgba(204 204 204 .2)
+  background rgba(204 204 204 0.2)
   .blog-list
-    max-width: 1200px
     margin 0 auto
+    max-width 1200px
+    width 95%
     +bp(md)
-      max-width: 95%
+      max-width 95%
   ul
     li
-      border 1px solid #3b4043
-      padding 20px
-      box-sizing: border-box
-      box-shadow 2px 2px 8px gray;
+      box-sizing border-box
       margin-top 40px
-      transition: .5s
+      padding 20px
+      border 1px solid #3b4043
+      box-shadow 2px 2px 8px gray
+      transition 0.5s
       &:hover
         transform translate(5px, 5px)
       a
-        display: flex
-        justify-content: flex-start
-        align-items: flex-start
-        width: 100%
+        display flex
+        justify-content flex-start
+        align-items flex-start
+        width 100%
         +bp(md)
-          flex-direction: column
-          justify-content: center
-          align-items: center
+          flex-direction column
+          justify-content center
+          align-items center
         .thumbnail
-          width: 30%
+          width 30%
           +bp(md)
-            width: 100%
-            display: flex
-            justify-content: center
-            align-items: center
+            display flex
+            justify-content center
+            align-items center
+            width 100%
         .post-title
-          margin-left: 10px
-          width: 70%
+          margin-left 10px
+          width 70%
           +bp(md)
-            width: 100%
-            margin-left: 0
-            margin-top: 15px
+            margin-top 15px
+            margin-left 0
+            width 100%
           h3
-            font-size rem(24px)
-            line-height: rem(40px)
             font-weight bold
+            font-size rem(24px)
+            line-height rem(40px)
           p
-            margin-top: 15px
+            margin-top 15px
             font-size rem(18px)
-            line-height: rem(32px)
+            line-height rem(32px)
 </style>

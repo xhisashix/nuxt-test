@@ -39,7 +39,8 @@ export default {
     { src: '~/plugins/vue-tooltip.js', mode: 'client' },
     { src: '~/plugins/vue-scrollmajic.js', mode: 'client' },
     { src: '~/plugins/color-picker.js', mode: 'client' },
-    { src: '~/plugins/vue-highlightjs.js', mode: 'client'}
+    { src: '~/plugins/vue-highlightjs.js', mode: 'client'},
+    { src: '~/plugins/vue-fullpage.js', mode: 'client'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

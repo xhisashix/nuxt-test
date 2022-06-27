@@ -3,8 +3,15 @@
   .top-10
     h1 現在の急上昇動画 {{ now }}
     ul
-      li(v-for="top in topTenVideo.items")
-        p {{ top.snippet.title }}
+      li(v-for="(top, index) in topTenVideo.items")
+        .rank-area
+          span(v-html="'第' + (index+1) + '位'")
+          h3 {{top.snippet.channelTitle}}
+        .content-area
+          img(:src="top.snippet.thumbnails.high.url")
+          .detail
+            h3 {{ top.snippet.title }}
+            p {{ top.snippet.status }}
   .search-area
     h1 Youtube動画検索
     input(type="text" v-model="query")
@@ -26,11 +33,7 @@ export default {
       query: 'コムドット',
       key: 'AIzaSyD-orNDwpIToOHyLfzroXJPyUcIs36cwFM',
       topTenVideo: '',
-      topTen: {
-        chart: 'mostPopular',
-        maxResults: 10,
-        regionCode: 'JP'
-      }
+      video: '',
     }
   },
   computed: {
@@ -49,10 +52,11 @@ export default {
         ':' +
         now.getSeconds()
       return formattedDate
-    }
+    },
   },
   mounted() {
     this.getTopTen()
+    this.getVideo('HF_zchR-m0s')
   },
   methods: {
     searchContent() {
@@ -68,7 +72,7 @@ export default {
     },
     getTopTen() {
       axios
-        .get('https://www.googleapis.com/youtube/v3/search', {
+        .get('https://www.googleapis.com/youtube/v3/videos', {
           params: {
             part: 'snippet',
             chart: 'mostPopular',
@@ -78,6 +82,17 @@ export default {
           }
         })
         .then((response) => (this.topTenVideo = response.data))
+    },
+    getVideo(videoId) {
+      axios
+      .get('https://www.googleapis.com/youtube/v3/videos', {
+        params: {
+          part: 'statistics',
+          id: videoId,
+          key: this.key
+        }
+      })
+      .then((response) => (this.video = response.data))
     }
   }
 }
@@ -89,6 +104,34 @@ export default {
   width: 80%
   margin 0 auto
   margin-top: 30px
+  .top-10
+    li
+      margin-top 20px
+      .rank-area
+        display flex
+        justify-content flex-start
+        span
+          font-size rem(24px)
+          line-height rem(28px)
+          font-weight bold
+          margin-right 10px
+        h3
+          font-size rem(24px)
+          line-height rem(28px)
+          font-weight bold
+      .content-area
+        margin-top 10px
+        display flex
+        justify-content space-between
+        align-items flex-start
+        img
+          width 50%
+          height auto
+        h3
+          font-size rem(24px)
+          line-height rem(28px)
+          font-weight bold
+          margin-left 20px
   .search-result
     margin-top 20px
     li

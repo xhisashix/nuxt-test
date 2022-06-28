@@ -11,7 +11,9 @@
           img(:src="top.snippet.thumbnails.high.url")
           .detail
             h3 {{ top.snippet.title }}
-            p {{ top.snippet.status }}
+            p {{ top.snippet.description.substr(0, 150) }} ...
+            button
+              a(:href="'https://www.youtube.com/watch?v=' + top.id" target="_blank") 動画を見る
   .search-area
     h1 Youtube動画検索
     input(type="text" v-model="query")
@@ -122,16 +124,37 @@ export default {
       .content-area
         margin-top 10px
         display flex
-        justify-content space-between
+        justify-content flex-start
         align-items flex-start
         img
-          width 50%
+          width 20%
           height auto
-        h3
-          font-size rem(24px)
-          line-height rem(28px)
-          font-weight bold
-          margin-left 20px
+        .detail
+            margin-left 20px
+          h3
+            font-size rem(24px)
+            line-height rem(28px)
+            font-weight bold
+          p
+            margin-top 15px
+            font-size rem(16px)
+            line-height rem(22px)
+          button
+            margin-left auto
+            margin-top 20px
+            width 150px
+            box-sizing border-box
+            padding 5px 10px
+            border-radius 10px
+            border 1px solid red
+            background red
+            a
+              text-align center
+              font-weight bold
+              color color-white
+              font-size rem(18px)
+              line-height rem(22px)
+
   .search-result
     margin-top 20px
     li
